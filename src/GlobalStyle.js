@@ -2,12 +2,15 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --color-primary-dark: #0B3470;
+        --primary-dark: #0B3470;
+        --secondary-dark: #1357BD;
+        --primary-light: #619BF2;
+        --secondary-light: #186EF0;
 
         --primary-font: 'Andada Pro', serif;
 
         --logo-color-text: #FF9B7F;
-        --text-light: #DBDBDB;
+        --text-light: #c6dbff;
     }
 
     * {
@@ -15,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: var(--color-primary-dark);
+        background-color: var(--primary-dark);
     }
 
     .App {
@@ -29,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     }
     
     body, input, textarea, select, button {
-        font-family: Poppins, sans-serif;
+        font-family: var(--primary-font);
     }
     
     button {
@@ -43,10 +46,6 @@ const GlobalStyle = createGlobalStyle`
     
     input, button, select {
         outline: none;
-    }
-
-    h1 {
-        font-family: var(--primary-font);
     }
 `
 
