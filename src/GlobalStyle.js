@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --primary-dark: #0B3470;
-        --secondary-dark: #1357BD;
-        --primary-light: #619BF2;
-        --secondary-light: #186EF0;
+        --primary-dark: #${props => props.theme === "light" ? '619BF2' : '0B3470'};
+        --secondary-dark: #${props => props.theme === "light" ? '186EF0' : '1357BD'};
+        --primary-light: #${props => props.theme === "light" ? '0B3470' : '619BF2'};;
+        --secondary-light: #${props => props.theme === "light" ? '1357BD' : '186EF0'};
 
         --primary-font: 'Andada Pro', serif;
 

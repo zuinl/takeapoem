@@ -1,15 +1,30 @@
+import { useState } from "react";
+
+import ThemeContext from "./contexts/ThemeContext";
+
 import Header from "./components/Header";
 import MoodsBox from "./components/MoodsBox";
 import Title from "./components/Title";
+import ThemeButton from "./components/ThemeButton";
+import GlobalStyle from "./GlobalStyle";
 
 function App() {
-  return (
-    <div className="App">
-      <Header />
+  const [theme, setTheme] = useState("dark")
 
-      <Title title="How are you feeling today?" />
-      <MoodsBox />
-    </div>
+  return (
+    <ThemeContext.Provider value={theme}>
+      <GlobalStyle theme={theme} />
+
+      <div className="App">
+        <ThemeButton theme={theme}
+          toggleTheme={_ => setTheme(theme === "dark" ? "light" : "dark")} />
+
+        <Header />
+
+        <Title title="How are you feeling today?" />
+        <MoodsBox />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
