@@ -7,6 +7,7 @@ import MoodsBox from "./components/MoodsBox";
 import Title from "./components/Title";
 import ThemeButton from "./components/ThemeButton";
 import GlobalStyle from "./GlobalStyle";
+import LoadingMessage from "./components/LoadingMessage";
 
 function App() {
   const [theme, setTheme] = useState("dark")
@@ -23,6 +24,11 @@ function App() {
 
         <Title title="How are you feeling today?" />
         <MoodsBox />
+
+        <LoadingMessage
+          message="I'm looking for the perfect poem for you" />
+        
+        <Title title="Alright, so take this poem" />
       </div>
     </ThemeContext.Provider>
   );
