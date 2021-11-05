@@ -6,12 +6,11 @@ interface LoadingMessageProps {
 
 const LoadingMessage = (props: LoadingMessageProps) => {
     return (
-        <S.LoadingMessage>
-            {props.message || "Buscando"}
-            <span id="dot1">.</span>
-            <span id="dot2">.</span>
-            <span id="dot3">.</span>
-        </S.LoadingMessage>
+        <S.Wrapper>
+            <S.LoadingMessage>
+                {props.message || "Buscando"}...
+            </S.LoadingMessage>
+        </S.Wrapper>
     )
 }
 
