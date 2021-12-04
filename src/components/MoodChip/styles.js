@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const MoodChip = styled.div`
-    background: var(--secondary-dark);
+    background: ${props => props.active ? '#FFF' : 'var(--secondary-dark)'};
     padding: .5rem 1rem;
     border-radius: 20px;
-    color: var(--text-light);
+    color: ${props => props.active ? 'var(--secondary-dark)' : 'var(--text-light)'};
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
