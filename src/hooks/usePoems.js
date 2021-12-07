@@ -1,8 +1,5 @@
 import { useState } from "react"
-
-const poems = [
-    
-]
+import poems from "../utils/poems"
 
 function useMoods () {
     const [currentPoem, setCurrentPoem] = useState("")

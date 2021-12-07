@@ -1,4 +1,4 @@
-import useMoods from '../../hooks/Moods/useMoods'
+import useMoods from '../../hooks/useMoods'
 import MoodChip from '../MoodChip'
 import * as S from './styles'
 
